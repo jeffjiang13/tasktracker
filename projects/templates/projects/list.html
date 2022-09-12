@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <div>
+        <h1>My Projects</h1>
+        {% if project_list|length < 1 %}
+        <p>{{ "You are not assigned to any projects" }}</p>
+        {% else %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Number of tasks</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in project_list  %}
+                <tr>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.tasks.all|length }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</main>
+
+{% endblock content %}
