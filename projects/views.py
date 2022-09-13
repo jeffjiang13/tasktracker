@@ -8,7 +8,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 from projects.models import Project
-from tasks.models import Task
 
 
 class ProjectListView(LoginRequiredMixin, ListView):
