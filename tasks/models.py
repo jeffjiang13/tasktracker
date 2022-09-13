@@ -1,9 +1,7 @@
 from django.db import models
-from projects.models import Project
+from projects.models import Project, USER_MODEL
 
 from django.conf import settings
-
-USER_MODEL = settings.AUTH_USER_MODEL
 
 
 # Create your models here.
